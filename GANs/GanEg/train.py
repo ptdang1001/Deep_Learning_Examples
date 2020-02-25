@@ -10,7 +10,7 @@ import tools
 
 
 
-real_data = tools.get_real_sampler( data_mean, data_stddev )
+real_data = tools.get_real_sampler( data_mean, data_stddev ) #normal distribution
 noise_data  = tools.get_noise_sampler()
 
 G = modules.Generator(input_size=g_input_size, hidden_size=g_hidden_size, output_size=g_output_size)
