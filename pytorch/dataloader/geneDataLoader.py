@@ -34,7 +34,7 @@ torch_dataset = Data.TensorDataset(geneData, geneData_label)  # To transform you
 #sys.exit(1) #pause here
 
 
-loader = Data.DataLoader(
+geneLoader = Data.DataLoader(
     dataset=torch_dataset,  # your data and label
     batch_size=BATCH_SIZE,  # batch size
     shuffle=True,  # shuffle data True or False
@@ -52,7 +52,7 @@ if __name__ == "__main__":  # if you use windows, please put your training proce
         Here is your train process
         '''
         #print the data and their label to help you understand what is in the data loader.
-        for step, (batchGeneData, batchGeneDataLabel) in enumerate(loader):
+        for step, (batchGeneData, batchGeneDataLabel) in enumerate(geneLoader):
             print('Epoch: ', epoch, '| Step: ', step, '| batch geneData: ',
                   batchGeneData.numpy(), '| batch geneData: ', batchGeneDataLabel.numpy())
     print("----------------------------Trainning End------------------------------------")
