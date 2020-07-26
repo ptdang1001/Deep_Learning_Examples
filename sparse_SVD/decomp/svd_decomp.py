@@ -1,6 +1,6 @@
 import numpy as np
 
-from SparseMat2 import SparseMat
+from SparseMat import SparseMat
 
 __author__ = "Marco Bommarito"
 __email__ = "bommaritom@carleton.edu"
